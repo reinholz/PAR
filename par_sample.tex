@@ -1,0 +1,153 @@
+\documentclass[letter]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{multicol}
+
+%%%
+% Set up the margins to use a fairly large area of the page
+%%%
+\parskip=.07in
+\parindent=0in
+
+
+\usepackage[letterpaper, total={7.5in, 10in}, top=2cm]{geometry}
+
+
+\input{par_icons.tex}
+
+%%%
+% This is where the body of the document goes
+%%%
+\begin{document}
+
+\begin{center}{\Large{\textbf{Sample PAR Packet}}}\end{center}
+
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+ Name: \rule{5cm}{0.5pt} & Section: \rule{6cm}{0.5pt} \\
+\hline\hline
+\end{tabular*} \\
+
+	{\bf The PAR Process}
+	\par\begin{tikzpicture}
+		\def\spacing{3.2}
+
+		\PARPROCESSNODE{A}{\PARDRAFT}{(At Home)}{Draft}{(0,0)}
+		\PARPROCESSNODE{B}{\PARREFLECT}{(At Home)}{Reflect}{(\spacing,0)}
+		\PARPROCESSNODE{C}{\PAREXCHANGE}{(Tuesday Class)}{Exchange Feedback}{(2*\spacing,0)}
+		\PARPROCESSNODE{D}{\PARREVISE}{(At Home)}{Revise}{(3*\spacing,0)}
+		\PARPROCESSNODE{E}{\PARSUBMIT}{(Wednesday Class)}{Submit}{(4*\spacing,0)}
+		\draw[->, ultra thick] (A) edge (B);
+		\draw[->, ultra thick] (B) edge (C);
+		\draw[->, ultra thick] (C) edge (D);
+		\draw[->, ultra thick] (D) edge (E);
+	\end{tikzpicture}
+
+\textbf{Problem Statement (Filling Bottles)}
+
+You are filling up bottles with liquid coming from a tap at a constant rate. 
+\begin{enumerate}
+\item For each bottle, sketch a graph of the height of liquid in the bottle as a function of time.
+\item For each bottle, sketch a graph of the rate of change of the height of liquid in the bottle as a function of time.
+\end{enumerate}
+\begin{center}\includegraphics[scale=0.75]{InkBottles.pdf}\end{center}
+
+
+
+
+
+
+
+
+
+	\vfill\par
+	\begin{center}
+		{\bf Reflection}\\
+		Turn the page and check off the icons for things you think you did well; circle the icons for things
+		you would like feedback on.
+	\end{center}
+
+
+
+\newpage
+\newgeometry{total={7.5in, 10.5in}}
+
+
+\begin{center}{\Large{\textbf{Feedback Provided By: \rule{6cm}{0.5pt}}}}\end{center}
+
+
+	\begin{minipage}{4cm}\bf Suggestions\hfill\end{minipage}\hfill{Communication}\hfill\begin{minipage}{4cm}\hfill{\bf Strengths}\end{minipage}\\
+	\vspace{-.3cm}
+	\hrule
+
+	\vspace{-.3cm}
+	\begin{center}
+	\begin{tikzpicture}
+		\def\spacing{2.15cm}
+		\PARCHECKLISTNODE{A}{(0,0)}{\PARSTEPS}{Show All Steps}
+		\PARCHECKLISTNODE{B}{(0,-1*\spacing)}{\PAREXPLAIN}{Explain Why,\\Not Just What}
+		\PARCHECKLISTNODE{C}{(0,-2*\spacing)}{\PARPRONOUNS}{Avoid Pronouns}
+		\PARCHECKLISTNODE{D}{(0,-3*\spacing)}{\PARDEFINITIONS}{Use Correct \\Definitions}
+		\PARCHECKLISTNODE{E}{(0,-4*\spacing)}{\PARVARIABLES}{Define Variables, \\Units, etc.}
+		\PARCHECKLISTNODE{F}{(0,-5*\spacing)}{\PARDIAGRAMS}{Create Diagrams}
+	\end{tikzpicture}
+	\end{center}
+	
+	\begin{minipage}{4cm}\bf Suggestions\hfill\end{minipage}\hfill{Accuracy}\hfill\begin{minipage}{4cm}\hfill{\bf Strengths}\end{minipage}\\
+	\vspace{-.3cm}
+	\hrule
+	
+	\vspace{-0.3cm}
+	\begin{center}
+	\begin{tikzpicture}
+		\def\spacing{2.2cm}
+		\PARCHECKLISTNODE{A}{(0,0)}{\PARSETUP}{Correct Setup}
+		\PARCHECKLISTNODE{B}{(0,-1*\spacing)}{\PARCALCULATIONS}{Accurate Calculations}
+		\PARCHECKLISTNODE{C}{(0,-2*\spacing)}{\PARMULTIPLE}{Solve Multiple Ways}
+		\PARCHECKLISTNODE{D}{(0,-3*\spacing)}{\PARCHECK}{Answer Reasonable}
+		\PARCHECKLISTNODE{E}{(0,-4*\spacing)}{\PAROTHER}{Other \\(Write Below)}
+	\end{tikzpicture}
+	\end{center}
+
+\restoregeometry
+
+\newpage
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+\textbf{Draft (Page 1)} & Name: \rule{6cm}{0.5pt} \\
+\hline \hline
+\end{tabular*} \\
+
+
+\newpage
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+\textbf{Draft (Page 2)} &  \\
+\hline \hline
+\end{tabular*} \\
+
+
+
+
+\newpage
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+\textbf{Submission (Page 1)} & Name: \rule{6cm}{0.5pt} \\
+\hline \hline
+\end{tabular*} \\
+
+
+\newpage
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+\textbf{Submission (Page 2)} &  \\
+\hline \hline
+\end{tabular*} \\
+
+
+\end{document}
